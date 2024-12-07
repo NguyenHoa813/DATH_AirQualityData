@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{24015D4E-A0DF-4A2B-8392-C3AAB6872817}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{2CB62D61-C878-49C3-8D8D-CCE30C8FE95D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -130,18 +130,6 @@
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Category\InsertDDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Category\InsertDDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Category\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\Category\InsertDDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\Category\InsertDDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Category\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                     <inputColumn
                       refId="Package\Category\InsertDDS.Inputs[OLE DB Destination Input].Columns[CategorySK]"
                       cachedDataType="i4"
@@ -782,18 +770,6 @@ where CategorySK = ?</property>
                       cachedName="CountyName"
                       externalMetadataColumnId="Package\County\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CountyName]"
                       lineageId="Package\County\NDS.Outputs[OLE DB Source Output].Columns[CountyName]" />
-                    <inputColumn
-                      refId="Package\County\Insert DDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\County\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\County\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\County\Insert DDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\County\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\County\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1460,18 +1436,6 @@ where CountySK = ?</property>
                       cachedName="ParameterName"
                       externalMetadataColumnId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterName]"
                       lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2163,18 +2127,6 @@ where ParameterSK = ?</property>
                       externalMetadataColumnId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[DateSK]"
                       lineageId="Package\Date\NDS.Outputs[OLE DB Source Output].Columns[DateSK]" />
                     <inputColumn
-                      refId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Date\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Date\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
-                    <inputColumn
                       refId="Package\Date\Insert DDS.Inputs[OLE DB Destination Input].Columns[IsDayLightSaving]"
                       cachedDataType="bool"
                       cachedName="IsDayLightSaving"
@@ -2785,18 +2737,6 @@ where [refTable].[DateSK] = ?</property>
                       cachedName="StateName"
                       externalMetadataColumnId="Package\State\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[StateName]"
                       lineageId="Package\State\NDS.Outputs[OLE DB Source Output].Columns[StateName]" />
-                    <inputColumn
-                      refId="Package\State\Insert DDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\State\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\State\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\State\Insert DDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\State\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\State\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3359,55 +3299,123 @@ where StateSK = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="102.4,41.6"
-          Id="Package\State"
-          TopLeft="189.999989618858,43.3333330319988" />
+          Size="120.8,41.6"
+          Id="Package\Category"
+          TopLeft="511.666638710434,43.3333330319987" />
         <NodeLayout
           Size="111.2,41.6"
           Id="Package\County"
           TopLeft="352.49998074025,43.3333330319987" />
         <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\Category"
-          TopLeft="511.666638710434,43.3333330319987" />
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="351.666647452448,139.533332363036" />
         <NodeLayout
           Size="100,41.6"
           Id="Package\Date"
           TopLeft="189.999989618858,136.066665720476" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="351.666647452448,139.533332363036" />
+          Size="102.4,41.6"
+          Id="Package\State"
+          TopLeft="189.999989618858,43.3333330319988" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\State">
+    design-time-name="Package\Category">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="100,41.6"
-          Id="Package\State\NDS"
-          TopLeft="251.999996244907,62.9999990612268" />
-        <NodeLayout
           Size="112.8,41.6"
-          Id="Package\State\Lookup"
-          TopLeft="405.499994039536,62.4999991506338" />
+          Id="Package\Category\Lookup"
+          TopLeft="322.166651003891,24.2333334116803" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Category\Update DDS"
+          TopLeft="166.333327824043,141.766666136318" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Category\InsertDDS"
+          TopLeft="515.833305149444,29.4666664617591" />
+        <NodeLayout
+          Size="100,41.6"
+          Id="Package\Category\NDS"
+          TopLeft="161.333324818976,21.9666665521595" />
         <EdgeLayout
-          Id="Package\State.Paths[OLE DB Source Output]"
-          TopLeft="351.999996244907,83.5499991059303">
+          Id="Package\Category.Paths[Lookup No Match Output]"
+          TopLeft="434.966651003891,47.6499999367197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53.4999977946281,0"
+              EndConnector="80.8666541455526,0"
               Start="0,0"
-              End="45.9999977946281,0">
+              End="73.3666541455526,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="45.9999977946281,0" />
+                    End="73.3666541455526,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-19.1230596459737,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Category.Paths[Lookup Match Output]"
+          TopLeft="378.566651003891,65.8333334116803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143.833323179848,75.9333327246375"
+              Start="0,0"
+              End="-143.833323179848,68.4333327246375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.9666663623187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.9666663623187"
+                    Point2="0,37.9666663623187"
+                    Point3="-4,37.9666663623187" />
+                  <mssgle:LineSegment
+                    End="-139.833323179848,37.9666663623187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-139.833323179848,37.9666663623187"
+                    Point2="-143.833323179848,37.9666663623187"
+                    Point3="-143.833323179848,41.9666663623187" />
+                  <mssgle:LineSegment
+                    End="-143.833323179848,68.4333327246375" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-120.108048308674,42.9666663623187,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Category.Paths[OLE DB Source Output]"
+          TopLeft="261.333324818976,43.8999999819199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.8333261849155,0"
+              Start="0,0"
+              End="53.3333261849155,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.3333261849155,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3416,77 +3424,58 @@ where StateSK = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\State\Insert DDS"
-          TopLeft="604.499991521239,62.4999995976686" />
-        <EdgeLayout
-          Id="Package\State.Paths[Lookup No Match Output]"
-          TopLeft="518.299994039536,83.2999993741512">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.1999974817037,0"
-              Start="0,0"
-              End="78.6999974817037,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="78.6999974817037,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-16.4563879778982,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\State\Update DDS"
-          TopLeft="248.499997273088,167.499998480082" />
-        <EdgeLayout
-          Id="Package\State.Paths[Lookup Match Output]"
-          TopLeft="461.899994039536,104.099999150634">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-144.999996766448,63.3999993294478"
-              Start="0,0"
-              End="-144.999996766448,55.8999993294478">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.6999996647239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.6999996647239"
-                    Point2="0,31.6999996647239"
-                    Point3="-4,31.6999996647239" />
-                  <mssgle:LineSegment
-                    End="-140.999996766448,31.6999996647239" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-140.999996766448,31.6999996647239"
-                    Point2="-144.999996766448,31.6999996647239"
-                    Point3="-144.999996766448,35.6999996647239" />
-                  <mssgle:LineSegment
-                    End="-144.999996766448,55.8999993294478" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-120.691385101974,36.6999996647239,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Category\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[DIM].[CATEGORY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Category\InsertDDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Category\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\County">
     <LayoutInfo>
@@ -3497,59 +3486,13 @@ where StateSK = ?</property>
           Id="Package\County\NDS"
           TopLeft="221.499996781349,39.4999994933605" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\County\Lookup"
-          TopLeft="384.499994799495,39.4999999403954" />
-        <EdgeLayout
-          Id="Package\County.Paths[OLE DB Source Output]"
-          TopLeft="321.499996781349,60.2999997168779">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.9999980181456,0"
-              Start="0,0"
-              End="55.4999980181456,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="55.4999980181456,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="128.8,41.6"
           Id="Package\County\Insert DDS"
           TopLeft="577.999991387129,40.9999993890524" />
-        <EdgeLayout
-          Id="Package\County.Paths[Lookup No Match Output]"
-          TopLeft="497.299994799495,61.0499996647239">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="80.6999965876341,0"
-              Start="0,0"
-              End="73.1999965876341,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73.1999965876341,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-19.206388424933,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\County\Lookup"
+          TopLeft="384.499994799495,39.4999999403954" />
         <NodeLayout
           Size="136.8,41.6"
           Id="Package\County\Update DDS"
@@ -3590,36 +3533,20 @@ where StateSK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Category">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="100,41.6"
-          Id="Package\Category\NDS"
-          TopLeft="161.333324818976,21.9666665521595" />
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Category\Lookup"
-          TopLeft="322.166651003891,24.2333334116803" />
         <EdgeLayout
-          Id="Package\Category.Paths[OLE DB Source Output]"
-          TopLeft="261.333324818976,43.8999999819199">
+          Id="Package\County.Paths[OLE DB Source Output]"
+          TopLeft="321.499996781349,60.2999997168779">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.8333261849155,0"
+              EndConnector="62.9999980181456,0"
               Start="0,0"
-              End="53.3333261849155,0">
+              End="55.4999980181456,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.3333261849155,0" />
+                    End="55.4999980181456,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3628,126 +3555,33 @@ where StateSK = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\Category\InsertDDS"
-          TopLeft="515.833305149444,29.4666664617591" />
         <EdgeLayout
-          Id="Package\Category.Paths[Lookup No Match Output]"
-          TopLeft="434.966651003891,47.6499999367197">
+          Id="Package\County.Paths[Lookup No Match Output]"
+          TopLeft="497.299994799495,61.0499996647239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80.8666541455526,0"
+              EndConnector="80.6999965876341,0"
               Start="0,0"
-              End="73.3666541455526,0">
+              End="73.1999965876341,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="73.3666541455526,0" />
+                    End="73.1999965876341,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.1230596459737,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Category\Update DDS"
-          TopLeft="166.333327824043,141.766666136318" />
-        <EdgeLayout
-          Id="Package\Category.Paths[Lookup Match Output]"
-          TopLeft="378.566651003891,65.8333334116803">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.833323179848,75.9333327246375"
-              Start="0,0"
-              End="-143.833323179848,68.4333327246375">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.9666663623187" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.9666663623187"
-                    Point2="0,37.9666663623187"
-                    Point3="-4,37.9666663623187" />
-                  <mssgle:LineSegment
-                    End="-139.833323179848,37.9666663623187" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-139.833323179848,37.9666663623187"
-                    Point2="-143.833323179848,37.9666663623187"
-                    Point3="-143.833323179848,41.9666663623187" />
-                  <mssgle:LineSegment
-                    End="-143.833323179848,68.4333327246375" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-120.108048308674,42.9666663623187,96.3827734375,11.609375"
+              BoundingBox="-19.206388424933,5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\State\NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\State\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[DIM].[STATE]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\State\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\County\NDS">
     <Properties>
@@ -3758,29 +3592,6 @@ where StateSK = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\County\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[DIM].[COUNTY]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3798,7 +3609,159 @@ where StateSK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Category\NDS">
+    design-time-name="Package\County\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[DIM].[COUNTY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="375.999994397164,83.9999987483025" />
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\Data Flow Task\UpdateDDS"
+          TopLeft="194.499997183681,182.499997362495" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Data Flow Task\Insert DDS"
+          TopLeft="590.999991193414,87.9999986886978" />
+        <NodeLayout
+          Size="100,41.6"
+          Id="Package\Data Flow Task\NDS"
+          TopLeft="196.999997064471,82.9999987632036" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="488.799994397164,106.7999987185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.19999679625,0"
+              Start="0,0"
+              End="94.6999967962504,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="94.6999967962504,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.45638832062478,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="432.399994397163,125.599998748302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-171.099997213483,56.899998614192"
+              Start="0,0"
+              End="-171.099997213483,49.399998614192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.449999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.449999307096"
+                    Point2="0,28.449999307096"
+                    Point3="-4,28.449999307096" />
+                  <mssgle:LineSegment
+                    End="-167.099997213483,28.449999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-167.099997213483,28.449999307096"
+                    Point2="-171.099997213483,28.449999307096"
+                    Point3="-171.099997213483,32.449999307096" />
+                  <mssgle:LineSegment
+                    End="-171.099997213483,49.399998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-133.741385325491,33.449999307096,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="296.999997064471,104.299998755753">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.9999973326922,0"
+              Start="0,0"
+              End="71.4999973326922,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="71.4999973326922,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[DIM].[PARAMETER]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insert DDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3811,30 +3774,7 @@ where StateSK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Category\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[DIM].[CATEGORY]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Category\InsertDDS">
+    design-time-name="Package\Data Flow Task\NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3852,9 +3792,17 @@ where StateSK = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Date\Insert DDS"
+          TopLeft="239.499997854233,163.499998986721" />
+        <NodeLayout
           Size="100,41.6"
           Id="Package\Date\NDS"
           TopLeft="236.499996557832,36.499999538064" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Date\Derived Column"
+          TopLeft="592.499992147088,38.5000004023314" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Date\Lookup"
@@ -3881,10 +3829,6 @@ where StateSK = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Date\Derived Column"
-          TopLeft="592.499992147088,38.5000004023314" />
         <EdgeLayout
           Id="Package\Date.Paths[Lookup No Match Output]"
           TopLeft="524.299994397164,61.3000001490116">
@@ -3909,10 +3853,6 @@ where StateSK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\Date\Insert DDS"
-          TopLeft="239.499997854233,163.499998986721" />
         <EdgeLayout
           Id="Package\Date.Paths[Derived Column Output]"
           TopLeft="668.899992147088,80.1000004023313">
@@ -3951,6 +3891,19 @@ where StateSK = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Date\Insert DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Date\NDS">
     <Properties>
       <Property>
@@ -3969,7 +3922,7 @@ where StateSK = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3979,53 +3932,48 @@ where StateSK = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Date\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\State">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\State\Update DDS"
+          TopLeft="248.499997273088,167.499998480082" />
+        <NodeLayout
           Size="100,41.6"
-          Id="Package\Data Flow Task\NDS"
-          TopLeft="196.999997064471,82.9999987632036" />
+          Id="Package\State\NDS"
+          TopLeft="251.999996244907,62.9999990612268" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\State\Insert DDS"
+          TopLeft="604.499991521239,62.4999995976686" />
         <NodeLayout
           Size="112.8,41.6"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="375.999994397164,83.9999987483025" />
+          Id="Package\State\Lookup"
+          TopLeft="405.499994039536,62.4999991506338" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="296.999997064471,104.299998755753">
+          Id="Package\State.Paths[OLE DB Source Output]"
+          TopLeft="351.999996244907,83.5499991059303">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.9999973326922,0"
+              EndConnector="53.4999977946281,0"
               Start="0,0"
-              End="71.4999973326922,0">
+              End="45.9999977946281,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="71.4999973326922,0" />
+                    End="45.9999977946281,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4034,71 +3982,63 @@ where StateSK = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\Data Flow Task\Insert DDS"
-          TopLeft="590.999991193414,87.9999986886978" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="488.799994397164,106.7999987185">
+          Id="Package\State.Paths[Lookup No Match Output]"
+          TopLeft="518.299994039536,83.2999993741512">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.19999679625,0"
+              EndConnector="86.1999974817037,0"
               Start="0,0"
-              End="94.6999967962504,0">
+              End="78.6999974817037,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="94.6999967962504,0" />
+                    End="78.6999974817037,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8.45638832062478,5,111.6127734375,11.609375"
+              BoundingBox="-16.4563879778982,5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\Data Flow Task\UpdateDDS"
-          TopLeft="194.499997183681,182.499997362495" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="432.399994397163,125.599998748302">
+          Id="Package\State.Paths[Lookup Match Output]"
+          TopLeft="461.899994039536,104.099999150634">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-171.099997213483,56.899998614192"
+              EndConnector="-144.999996766448,63.3999993294478"
               Start="0,0"
-              End="-171.099997213483,49.399998614192">
+              End="-144.999996766448,55.8999993294478">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.449999307096" />
+                    End="0,27.6999996647239" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.449999307096"
-                    Point2="0,28.449999307096"
-                    Point3="-4,28.449999307096" />
+                    Point1="0,27.6999996647239"
+                    Point2="0,31.6999996647239"
+                    Point3="-4,31.6999996647239" />
                   <mssgle:LineSegment
-                    End="-167.099997213483,28.449999307096" />
+                    End="-140.999996766448,31.6999996647239" />
                   <mssgle:CubicBezierSegment
-                    Point1="-167.099997213483,28.449999307096"
-                    Point2="-171.099997213483,28.449999307096"
-                    Point3="-171.099997213483,32.449999307096" />
+                    Point1="-140.999996766448,31.6999996647239"
+                    Point2="-144.999996766448,31.6999996647239"
+                    Point3="-144.999996766448,35.6999996647239" />
                   <mssgle:LineSegment
-                    End="-171.099997213483,49.399998614192" />
+                    End="-144.999996766448,55.8999993294478" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-133.741385325491,33.449999307096,96.3827734375,11.609375"
+              BoundingBox="-120.691385101974,36.6999996647239,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4106,7 +4046,7 @@ where StateSK = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NDS">
+    design-time-name="Package\State\NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4119,38 +4059,38 @@ where StateSK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
+    design-time-name="Package\State\Insert DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\State\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[DIM].[PARAMETER]</Value>
+          type="q3:string">[DIM].[STATE]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
