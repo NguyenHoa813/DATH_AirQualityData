@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\2425.BI.DATH#2\\Package1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|solutionrelative:2425.BI.DATH#2\\Package1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\2425.BI.DATH#2\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|solutionrelative:2425.BI.DATH#2\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\2425.BI.DATH#2\\Package1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2016F54A-E90C-489F-A1B0-F3928DAC5DAD}|2425.BI.DATH#2\\2425.BI.DATH#2.dtproj|solutionrelative:2425.BI.DATH#2\\Package1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Package1.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\2425.BI.DATH#2\\Package1.dtsx",
               "RelativeDocumentMoniker": "2425.BI.DATH#2\\Package1.dtsx",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Package.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.BI.DATH#2\\2425.BI.DATH#2\\Package.dtsx",
               "RelativeDocumentMoniker": "2425.BI.DATH#2\\Package.dtsx",

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{2CB62D61-C878-49C3-8D8D-CCE30C8FE95D}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{D1EAD674-F897-4C6F-924F-11862AD8A4FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,7 +47,6 @@
       DTS:refId="Package\Category"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{1ea8f6d9-80f3-4170-ae45-0a144eb8f68d}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -665,7 +664,6 @@ where CategorySK = ?</property>
       DTS:refId="Package\County"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{9B5E5A5C-BF6F-4525-8525-D7C362A9F419}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1332,623 +1330,6 @@ where CountySK = ?</property>
               endId="Package\County\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\County\NDS.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{6586CD30-9585-419A-B28D-84A18EE2D2BE}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Data Flow Task\Insert DDS"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert DDS"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[DIM].[PARAMETER]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Insert DDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].Columns[ParameterSK]"
-                      cachedDataType="i4"
-                      cachedName="ParameterSK"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterSK]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].Columns[ParameterName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="ParameterName"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterName]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterSK]"
-                      dataType="i4"
-                      name="ParameterSK" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ParameterName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Insert DDS.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Lookup"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [DIM].[PARAMETER]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [DIM].[PARAMETER]) [refTable]
-where [refTable].[ParameterSK] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ParameterSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParameterName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[ParameterSK]"
-                      cachedDataType="i4"
-                      cachedName="ParameterSK"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">ParameterSK</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\NDS"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="NDS"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[defining_parameters_nds]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterSK]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]"
-                      name="ParameterSK"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterName]"
-                      length="5"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]"
-                      name="ParameterName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[DefParDescription]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[DefParDescription]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[DefParDescription]"
-                      name="DefParDescription"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
-                      name="CreatedDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterSK]"
-                      dataType="i4"
-                      name="ParameterSK" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="ParameterName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[DefParDescription]"
-                      dataType="wstr"
-                      length="50"
-                      name="DefParDescription" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterSK]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterSK]"
-                      name="ParameterSK" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterName]"
-                      name="ParameterName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[DefParDescription]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[DefParDescription]"
-                      name="DefParDescription" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
-                      name="CreatedDate" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
-                      name="UpdatedDate" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\UpdateDDS"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="UpdateDDS"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update DIM.PARAMETER
-set ParameterName = ?,
-UpdatedDate = getdate()
-where ParameterSK = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\UpdateDDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].Columns[ParameterName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="ParameterName"
-                      externalMetadataColumnId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].Columns[ParameterSK]"
-                      cachedDataType="i4"
-                      cachedName="ParameterSK"
-                      externalMetadataColumnId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">17</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\UpdateDDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Insert DDS.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task\NDS.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2629,10 +2010,626 @@ where [refTable].[DateSK] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Parameter"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6586CD30-9585-419A-B28D-84A18EE2D2BE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Parameter"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Parameter\Insert DDS"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert DDS"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[DIM].[PARAMETER]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parameter\Insert DDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].Columns[ParameterSK]"
+                      cachedDataType="i4"
+                      cachedName="ParameterSK"
+                      externalMetadataColumnId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterSK]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]" />
+                    <inputColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].Columns[ParameterName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="ParameterName"
+                      externalMetadataColumnId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterName]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterSK]"
+                      dataType="i4"
+                      name="ParameterSK" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[ParameterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ParameterName" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Parameter\Insert DDS.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parameter\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parameter\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\Insert DDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Parameter\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [DIM].[PARAMETER]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [DIM].[PARAMETER]) [refTable]
+where [refTable].[ParameterSK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ParameterSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ParameterName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parameter\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Parameter\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Parameter\Lookup.Inputs[Lookup Input].Columns[ParameterSK]"
+                      cachedDataType="i4"
+                      cachedName="ParameterSK"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ParameterSK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Parameter\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Parameter\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Parameter\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Parameter\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Parameter\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Parameter\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parameter\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parameter\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Parameter\NDS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="NDS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[defining_parameters_nds]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parameter\NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Parameter\NDS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterSK]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]"
+                      name="ParameterSK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterName]"
+                      length="5"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]"
+                      name="ParameterName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[DefParDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[DefParDescription]"
+                      length="50"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[DefParDescription]"
+                      name="DefParDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterSK]"
+                      dataType="i4"
+                      name="ParameterSK" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[ParameterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="ParameterName" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[DefParDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="DefParDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterSK]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterSK]"
+                      name="ParameterSK" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ParameterName]"
+                      name="ParameterName" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[DefParDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[DefParDescription]"
+                      name="DefParDescription" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Parameter\UpdateDDS"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="UpdateDDS"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update DIM.PARAMETER
+set ParameterName = ?,
+UpdatedDate = getdate()
+where ParameterSK = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Parameter\UpdateDDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC.2425.BI.DATH_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].Columns[ParameterName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="ParameterName"
+                      externalMetadataColumnId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterName]" />
+                    <inputColumn
+                      refId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].Columns[ParameterSK]"
+                      cachedDataType="i4"
+                      cachedName="ParameterSK"
+                      externalMetadataColumnId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Parameter\NDS.Outputs[OLE DB Source Output].Columns[ParameterSK]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">17</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Parameter\UpdateDDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Parameter.Paths[Lookup Match Output]"
+              endId="Package\Parameter\UpdateDDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Parameter\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Parameter.Paths[Lookup No Match Output]"
+              endId="Package\Parameter\Insert DDS.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Parameter\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Parameter.Paths[OLE DB Source Output]"
+              endId="Package\Parameter\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Parameter\NDS.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\State"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{3FFCC627-757C-4003-B8FA-A46B1D992905}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3307,8 +3304,8 @@ where StateSK = ?</property>
           Id="Package\County"
           TopLeft="352.49998074025,43.3333330319987" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
+          Size="127.2,41.6"
+          Id="Package\Parameter"
           TopLeft="351.666647452448,139.533332363036" />
         <NodeLayout
           Size="100,41.6"
@@ -3327,21 +3324,43 @@ where StateSK = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="100,41.6"
+          Id="Package\Category\NDS"
+          TopLeft="161.333324818976,21.9666665521595" />
+        <NodeLayout
           Size="112.8,41.6"
           Id="Package\Category\Lookup"
           TopLeft="322.166651003891,24.2333334116803" />
-        <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Category\Update DDS"
-          TopLeft="166.333327824043,141.766666136318" />
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\Category\InsertDDS"
           TopLeft="515.833305149444,29.4666664617591" />
         <NodeLayout
-          Size="100,41.6"
-          Id="Package\Category\NDS"
-          TopLeft="161.333324818976,21.9666665521595" />
+          Size="136.8,41.6"
+          Id="Package\Category\Update DDS"
+          TopLeft="166.333327824043,141.766666136318" />
+        <EdgeLayout
+          Id="Package\Category.Paths[OLE DB Source Output]"
+          TopLeft="261.333324818976,43.8999999819199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.8333261849155,0"
+              Start="0,0"
+              End="53.3333261849155,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.3333261849155,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Category.Paths[Lookup No Match Output]"
           TopLeft="434.966651003891,47.6499999367197">
@@ -3402,31 +3421,22 @@ where StateSK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Category.Paths[OLE DB Source Output]"
-          TopLeft="261.333324818976,43.8999999819199">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="60.8333261849155,0"
-              Start="0,0"
-              End="53.3333261849155,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="53.3333261849155,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Category\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Category\Lookup">
     <Properties>
@@ -3463,32 +3473,11 @@ where StateSK = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Category\NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\County">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="100,41.6"
-          Id="Package\County\NDS"
-          TopLeft="221.499996781349,39.4999994933605" />
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\County\Insert DDS"
-          TopLeft="577.999991387129,40.9999993890524" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\County\Lookup"
@@ -3497,42 +3486,14 @@ where StateSK = ?</property>
           Size="136.8,41.6"
           Id="Package\County\Update DDS"
           TopLeft="223.499997645617,138.499998912215" />
-        <EdgeLayout
-          Id="Package\County.Paths[Lookup Match Output]"
-          TopLeft="440.899994799495,81.0999999403953">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-148.999997153878,57.3999989718199"
-              Start="0,0"
-              End="-148.999997153878,49.8999989718199">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.6999994859099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.6999994859099"
-                    Point2="0,28.6999994859099"
-                    Point3="-4,28.6999994859099" />
-                  <mssgle:LineSegment
-                    End="-144.999997153878,28.6999994859099" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-144.999997153878,28.6999994859099"
-                    Point2="-148.999997153878,28.6999994859099"
-                    Point3="-148.999997153878,32.6999994859099" />
-                  <mssgle:LineSegment
-                    End="-148.999997153878,49.8999989718199" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-122.691385295689,33.6999994859099,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\County\Insert DDS"
+          TopLeft="577.999991387129,40.9999993890524" />
+        <NodeLayout
+          Size="100,41.6"
+          Id="Package\County\NDS"
+          TopLeft="221.499996781349,39.4999994933605" />
         <EdgeLayout
           Id="Package\County.Paths[OLE DB Source Output]"
           TopLeft="321.499996781349,60.2999997168779">
@@ -3579,35 +3540,45 @@ where StateSK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\County.Paths[Lookup Match Output]"
+          TopLeft="440.899994799495,81.0999999403953">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148.999997153878,57.3999989718199"
+              Start="0,0"
+              End="-148.999997153878,49.8999989718199">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6999994859099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.6999994859099"
+                    Point2="0,28.6999994859099"
+                    Point3="-4,28.6999994859099" />
+                  <mssgle:LineSegment
+                    End="-144.999997153878,28.6999994859099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-144.999997153878,28.6999994859099"
+                    Point2="-148.999997153878,28.6999994859099"
+                    Point3="-148.999997153878,32.6999994859099" />
+                  <mssgle:LineSegment
+                    End="-148.999997153878,49.8999989718199" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-122.691385295689,33.6999994859099,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\County\NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\County\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\County\Lookup">
     <Properties>
@@ -3631,29 +3602,77 @@ where StateSK = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\County\Insert DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\County\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Parameter">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="100,41.6"
+          Id="Package\Parameter\NDS"
+          TopLeft="196.999997064471,82.9999987632036" />
+        <NodeLayout
           Size="112.8,41.6"
-          Id="Package\Data Flow Task\Lookup"
+          Id="Package\Parameter\Lookup"
           TopLeft="375.999994397164,83.9999987483025" />
         <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\Data Flow Task\UpdateDDS"
-          TopLeft="194.499997183681,182.499997362495" />
-        <NodeLayout
           Size="128.8,41.6"
-          Id="Package\Data Flow Task\Insert DDS"
+          Id="Package\Parameter\Insert DDS"
           TopLeft="590.999991193414,87.9999986886978" />
         <NodeLayout
-          Size="100,41.6"
-          Id="Package\Data Flow Task\NDS"
-          TopLeft="196.999997064471,82.9999987632036" />
+          Size="133.6,41.6"
+          Id="Package\Parameter\UpdateDDS"
+          TopLeft="194.499997183681,182.499997362495" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          Id="Package\Parameter.Paths[OLE DB Source Output]"
+          TopLeft="296.999997064471,104.299998755753">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.9999973326922,0"
+              Start="0,0"
+              End="71.4999973326922,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="71.4999973326922,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Parameter.Paths[Lookup No Match Output]"
           TopLeft="488.799994397164,106.7999987185">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3677,7 +3696,7 @@ where StateSK = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          Id="Package\Parameter.Paths[Lookup Match Output]"
           TopLeft="432.399994397163,125.599998748302">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3712,33 +3731,24 @@ where StateSK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="296.999997064471,104.299998755753">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="78.9999973326922,0"
-              Start="0,0"
-              End="71.4999973326922,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="71.4999973326922,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
+    design-time-name="Package\Parameter\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parameter\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3761,20 +3771,7 @@ where StateSK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NDS">
+    design-time-name="Package\Parameter\Insert DDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3904,19 +3901,6 @@ where StateSK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Date\NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Date\Lookup">
     <Properties>
       <Property>
@@ -3939,27 +3923,40 @@ where StateSK = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Date\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\State">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\State\Lookup"
+          TopLeft="405.499994039536,62.4999991506338" />
+        <NodeLayout
           Size="136.8,41.6"
           Id="Package\State\Update DDS"
           TopLeft="248.499997273088,167.499998480082" />
-        <NodeLayout
-          Size="100,41.6"
-          Id="Package\State\NDS"
-          TopLeft="251.999996244907,62.9999990612268" />
         <NodeLayout
           Size="128.8,41.6"
           Id="Package\State\Insert DDS"
           TopLeft="604.499991521239,62.4999995976686" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\State\Lookup"
-          TopLeft="405.499994039536,62.4999991506338" />
+          Size="100,41.6"
+          Id="Package\State\NDS"
+          TopLeft="251.999996244907,62.9999990612268" />
         <EdgeLayout
           Id="Package\State.Paths[OLE DB Source Output]"
           TopLeft="351.999996244907,83.5499991059303">
@@ -4046,32 +4043,6 @@ where StateSK = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\State\NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\State\Insert DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\State\Lookup">
     <Properties>
       <Property>
@@ -4091,6 +4062,32 @@ where StateSK = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\State\Insert DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\State\NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
