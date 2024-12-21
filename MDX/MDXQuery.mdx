@@ -1,0 +1,177 @@
+﻿-- 1. Báo cáo giá trị min và max của AQI cho mỗi bang trong mỗi quý của các năm
+select non empty [Measures].[Min AQI] on columns,
+non empty
+[GEOGRAPHY].[State SK].[State SK].Members *
+[DATE].[QUARTER - SK].[QUARTER - SK].Members *
+[PARAMETER].[Parameter Name].Children
+on rows
+from [2425BIDATH DDS 2];
+
+-- 2. Báo cáo giá trị trung bình và độ lệch chuẩn của AQI cho mỗi bang trong mỗi quý của các năm
+WITH 
+member [Measures].[Means] as
+sum([Measures].[AQI]) / sum([Measures].[AQIDATA Count])
+SELECT 
+	[Measures].[Means] ON COLUMNS,
+	non empty [GEOGRAPHY].[Hierarchy].[State Name].Members * 
+	nonempty([DATE].[Year].[Year].Members) *
+	nonempty([DATE].[Hierarchy].[Quarter].Members) *
+	nonempty([PARAMETER].[Parameter Name].[Parameter Name].Members)
+	ON ROWS
+FROM 
+	[2425BIDATH DDS];
+
+select non empty [Measures].[Std Dev] on columns,
+non empty [DATE].[QUARTER - SK].[QUARTER - SK].Members *
+nonempty([GEOGRAPHY].[State SK].[State SK].Members) *
+nonempty([PARAMETER].[Parameter Name].Children)
+on rows
+from [2425BIDATH DDS 2];
+
+select non empty [Measures].[Std Dev] on columns,
+non empty [DATE].[QUARTER - SK].[QUARTER - SK].Members *
+nonempty([GEOGRAPHY].[State SK].&[2]) *
+nonempty([PARAMETER].[Parameter Name].Children)
+on rows
+from [2425BIDATH DDS 2];
+
+/*3. Report the number of days, and the mean AQI value where the air quality is rated
+as "very unhealthy" or worse for each State and County. Analysis hint: What is the
+AQI limit above which air quality is "very unhealthy" or worse?*/
+WITH 
+  MEMBER [Measures].[Average AQI] AS
+	(sum([Measures].[AQI]) / [Measures].[AQIDATA Count])
+	MEMBER [Measures].[Number Of Days] as
+	--[Measures].[AQIDATA Count]
+	DistinctCount([DATE].[Full Date].Children)
+SELECT 
+    NON EMPTY {[Measures].[Number Of Days] , [Measures].[Average AQI]} ON 0,
+    NON EMPTY filter(crossjoin([GEOGRAPHY].[Hierarchy].[State Name].Members,
+	[GEOGRAPHY].[County Name].Children,
+	{[PARAMETER].[Parameter Name].Children}),
+	[Measures].[Number Of Days] > 0) ON 1
+FROM [2425BIDATH DDS]
+where [CATEGORY].[Category SK].&[6];
+
+WITH 
+  MEMBER [Measures].[Average AQI] AS
+	(sum([Measures].[AQI]) / [Measures].[AQIDATA Count])
+	MEMBER [Measures].[Number Of Days] as
+	--[Measures].[AQIDATA Count]
+	DistinctCount([DATE].[Full Date].Children)
+SELECT 
+    NON EMPTY {[Measures].[Number Of Days] , [Measures].[Average AQI]} ON 0,
+    NON EMPTY bottomcount(filter(crossjoin([GEOGRAPHY].[Hierarchy].[State Name].Members,
+	[GEOGRAPHY].[County Name].Children,
+	{[PARAMETER].[Parameter Name].&[NO2]}),
+	[Measures].[Number Of Days] > 0),
+	1,
+	[Measures].[Average AQI]) ON 1
+FROM [2425BIDATH DDS]
+where [CATEGORY].[Category SK].&[6];
+
+--4. Đối với bốn bang sau: Hawaii, Alaska, Illinois và Delaware, đếm số ngày trong mỗi hạng mục chất lượng không khí (Tốt, Trung bình, v.v.) theo quận
+with member [Measures].[Count] as
+DistinctCount(
+[DATE].[Full Date].Children)
+select non empty [Measures].[Count] on columns,
+non empty{
+[GEOGRAPHY].[Hierarchy].[State Name].&[Hawaii],
+[GEOGRAPHY].[Hierarchy].[State Name].&[Alaska], 
+[GEOGRAPHY].[Hierarchy].[State Name].&[Illinois], 
+[GEOGRAPHY].[Hierarchy].[State Name].&[Delaware]
+} * [GEOGRAPHY].[County Name].Members *
+nonempty([CATEGORY].[Category Name].[Category Name].Members)
+on rows
+from [2425BIDATH DDS];
+--5. Đối với bốn bang sau: Hawaii, Alaska, Illinois và Delaware, tính giá trị trung bình của AQI theo quý
+WITH 
+MEMBER [Measures].[Average AQI] AS 
+	sum([Measures].[AQI]) / sum([Measures].[AQIDATA Count])
+SELECT 
+	{[Measures].[Average AQI]} ON COLUMNS,
+	non empty{[Geography].[State Name].&[Hawaii],
+	[Geography].[State Name].&[Alaska],
+	[Geography].[State Name].&[Illinois],
+	[Geography].[State Name].&[Delaware]} * 
+	nonempty([DATE].[Hierarchy].[Year].Members) *
+	nonempty([DATE].[Quarter].[Quarter].Members) *
+	nonempty([PARAMETER].[Parameter Name].Children)
+	ON ROWS 
+FROM 
+	[2425BIDATH DDS];
+
+/*6. Design a report to demonstrate the AQI fluctuation trends over the year for the four
+following states: Hawaii, Alaska, Illinois and California. Analysis hint: Give your
+opinion about the fluctuations of AQI value.*/
+WITH 
+  MEMBER [Measures].[Yearly AQI] AS
+   sum([Measures].[AQI]) / (sum ([Measures].[AQIDATA Count]))
+SELECT 
+    NON EMPTY { [Measures].[Yearly AQI]} ON 0,
+    NON EMPTY 
+	CROSSJOIN( 
+			{[GEOGRAPHY].[State Name].&[Hawaii],
+               [GEOGRAPHY].[State Name].&[Alaska],
+               [GEOGRAPHY].[State Name].&[Illinois],
+               [GEOGRAPHY].[State Name].&[California]},
+			   [DATE].[Year]. Children,
+			   [PARAMETER].[Parameter Name].Children) ON 1
+FROM [2425BIDATH DDS];
+/*9. Report the mean, the standard deviation, min and max of AQI value group by
+State and County during each quarter of the year. Analysis hints: Pay attention
+to the values (mean, std, max, min). Are any unusually large or small? Compare
+the standard deviation values between question 1 and 2, explain.*/
+
+With
+MEMBER [Measures].[Mean] AS 
+	SUM([Measures].[AQI]) / sum([Measures].[AQIDATA Count])
+select non empty {[Measures].[Mean]}  on 0,
+non empty [GEOGRAPHY].[Hierarchy].[State Name].Members *
+			[GEOGRAPHY].[County Name].Children*
+			[DATE].[Hierarchy].[Year].Members *
+			[DATE].[Quarter].Children *
+			Nonempty([PARAMETER].[Parameter Name].Children)
+			on 1
+from [2425BIDATH DDS];
+
+select non empty {[Measures].[Min AQI], [Measures].[Max AQI], [Measures].[Std Dev AQI]} on columns,
+non empty [DATE].[QUARTER - SK].[QUARTER - SK].Members *
+[GEOGRAPHY].[County SK].[County SK].Members *
+[PARAMETER].[Parameter Name].Children
+on rows
+from [2425BIDATH DDS 1];
+
+select non empty {[Measures].[Min AQI], [Measures].[Max AQI], [Measures].[Std Dev AQI]} on columns,
+non empty [DATE].[QUARTER - SK].[QUARTER - SK].Members *
+[GEOGRAPHY].[County SK].&[24] *
+[PARAMETER].[Parameter Name].Children
+on rows
+from [2425BIDATH DDS 1];
+
+--10. Báo cáo giá trị trung bình AQI theo bang, hạng mục, DayLightSaving qua các năm
+WITH 
+MEMBER [Measures].[Average AQI] AS 
+	sum([Measures].[AQI]) / sum([Measures].[AQIDATA Count])
+SELECT [Measures].[Average AQI] ON COLUMNS,
+non empty [GEOGRAPHY].[State Name].Members *
+[DATE].[Year].Members *
+[DATE].[Is Day Light Saving].Members *
+[CATEGORY].[Category Name].Members *
+[PARAMETER].[Parameter Name].[Parameter Name].Members
+ON ROWS
+from [2425BIDATH DDS];
+
+--11. Count the number of days by State, Category in each month. Be caution: The Category in the data set is calculated for each County, not State.
+WITH 
+	MEMBER [Measures].[Number Of Days] as
+	--[Measures].[AQIDATA Count]
+	DistinctCount([DATE].[Full Date].Children)
+SELECT 
+    NON EMPTY {[Measures].[Number Of Days]} ON 0,
+    NON EMPTY filter(crossjoin([GEOGRAPHY].[Hierarchy].[State Name].Members,
+	[CATEGORY].[Category Name].Children),
+	[Measures].[Number Of Days] > 0) ON 1
+FROM [2425BIDATH DDS];
+
+--12. Báo cáo số ngày theo hạng mục và Định nghĩa Tham số
