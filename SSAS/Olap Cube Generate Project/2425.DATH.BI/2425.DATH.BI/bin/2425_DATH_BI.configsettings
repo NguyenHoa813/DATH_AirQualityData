@@ -1,0 +1,73 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>2425BIDATH DDS</ID>
+        <ConnectionString>Provider=MSOLEDBSQL.1;Data Source=PC;Persist Security Info=False;Integrated Security=SSPI;User ID=;Initial Catalog=2425.BI.DATH_DDS;Initial File Name=;Server SPN=;Authentication=;Access Token=</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>CATEGORY</ID>
+      </Dimension>
+      <Dimension>
+        <ID>DATE</ID>
+      </Dimension>
+      <Dimension>
+        <ID>PARAMETER</ID>
+      </Dimension>
+      <Dimension>
+        <ID>GEOGRAPHY</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>2425BIDATH DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>AQIDATA</ID>
+            <Partitions>
+              <Partition>
+                <ID>AQIDATA</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>2425BIDATH DDS 1</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>AQI STAT 1</ID>
+            <Partitions>
+              <Partition>
+                <ID>AQI STAT 1</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>2425BIDATH DDS 2</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>AQI STAT 2</ID>
+            <Partitions>
+              <Partition>
+                <ID>AQI STAT 2</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+      <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

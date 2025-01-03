@@ -1,0 +1,132 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\CATEGORY.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\CATEGORY.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\GEOGRAPHY.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\GEOGRAPHY.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\PARAMETER.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\PARAMETER.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 2.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\2425BIDATH DDS 2.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\2425BIDATH DDS 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{D408F7DD-A04A-41CE-AB59-ED20D8DBBFC7}|2425.DATH.BI\\2425_DATH_BI.dwproj|solutionrelative:2425.DATH.BI\\2425BIDATH DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CATEGORY.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\CATEGORY.dim",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\CATEGORY.dim",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\CATEGORY.dim [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\CATEGORY.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T13:28:36.817Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PARAMETER.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\PARAMETER.dim",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\PARAMETER.dim",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\PARAMETER.dim [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\PARAMETER.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:43:26.199Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GEOGRAPHY.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\GEOGRAPHY.dim",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\GEOGRAPHY.dim",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\GEOGRAPHY.dim [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\GEOGRAPHY.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:18:55.491Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DATE.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\DATE.dim",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\DATE.dim",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\DATE.dim [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\DATE.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:13:06.398Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "2425BIDATH DDS 2.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 2.cube",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\2425BIDATH DDS 2.cube",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 2.cube [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\2425BIDATH DDS 2.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:13:04.27Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "2425BIDATH DDS 1.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 1.cube",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\2425BIDATH DDS 1.cube",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS 1.cube [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\2425BIDATH DDS 1.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:12:50.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "2425BIDATH DDS.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS.cube",
+              "RelativeDocumentMoniker": "2425.DATH.BI\\2425BIDATH DDS.cube",
+              "ToolTip": "C:\\Users\\phamg\\source\\repos\\2425.DATH.BI\\2425.DATH.BI\\2425BIDATH DDS.cube [Design]",
+              "RelativeToolTip": "2425.DATH.BI\\2425BIDATH DDS.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-21T09:12:38.797Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
