@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>2425.BI.DATH#2</Name>
-    <LastWriteTime>2024-12-07T03:10:55.8628516Z</LastWriteTime>
+    <LastWriteTime>2025-01-01T10:17:16.8902913Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2024-12-07T03:10:13.122606Z</LastWriteTime>
+      <LastWriteTime>2025-01-01T07:29:48.5353186Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Package1.dtsx</Name>
-      <LastWriteTime>2024-12-07T03:10:54.0058219Z</LastWriteTime>
+      <LastWriteTime>2025-01-01T10:26:39.2197402Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

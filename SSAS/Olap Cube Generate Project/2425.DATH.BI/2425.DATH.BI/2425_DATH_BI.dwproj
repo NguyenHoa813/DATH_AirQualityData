@@ -37,6 +37,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>2425BIDATH DDS 3.cube</Name>
+      <FullPath>2425BIDATH DDS 3.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>2425BIDATH DDS 3.partitions</Name>
+          <FullPath>2425BIDATH DDS 3.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>

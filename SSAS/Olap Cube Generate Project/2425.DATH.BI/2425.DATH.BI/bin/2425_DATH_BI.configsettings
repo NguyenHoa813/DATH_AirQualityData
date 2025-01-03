@@ -64,6 +64,19 @@
           </MeasureGroup>
         </MeasureGroups>
       </Cube>
+      <Cube>
+        <ID>2425BIDATH DDS 3</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>AQI STAT MONTH STATE</ID>
+            <Partitions>
+              <Partition>
+                <ID>AQI STAT MONTH STATE</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
     </Cubes>
     <DataSourceImpersonationInfo>
       <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>

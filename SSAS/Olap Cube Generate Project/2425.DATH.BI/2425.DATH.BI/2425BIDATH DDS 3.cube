@@ -1,0 +1,262 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2c877a0a-60f8-4aa2-b91b-1d531248b044" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>2425BIDATH DDS 3</ID>
+  <Name>2425BIDATH DDS 3</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="03b903a7-b60c-46d2-b6bb-b9d706d00f4d">
+      <ID>PARAMETER</ID>
+      <Name>PARAMETER</Name>
+      <DimensionID>PARAMETER</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="116f2923-d1e6-40bd-81ae-3539faf7fce1">
+          <AttributeID>Parameter SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6c539fe-4d03-4911-8697-4f006d19506e">
+          <AttributeID>Parameter Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d416223c-1ef6-4204-8359-b404a6f5b7d4">
+      <ID>DATE</ID>
+      <Name>DATE</Name>
+      <DimensionID>DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6f4d9d5e-5a8f-48cc-9be0-9bd2baece58c">
+          <AttributeID>Date SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d8aa46fc-b5b8-461e-9a2c-902c2419bc4f">
+          <AttributeID>SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d17a6124-a8be-4cfc-9f4f-211c9394f29e">
+          <AttributeID>QUARTER - SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95b1f89b-e97f-4a05-88d3-4a40317bf6c9">
+          <AttributeID>YEAR - SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="21c56cd4-f332-42ad-9a97-44fd95e1b043">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fb2c774-5744-4b6b-865d-9f4bfa6d8272">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f2f3f975-45d5-497a-8e23-cdf813c4e0bc">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8475d1a7-3e88-4069-9981-09be20d404d8">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8139a73a-17a2-4ba3-93b6-0570e27b08ae">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f7f1a94-ace9-45f6-8390-c031d35c4efb">
+          <AttributeID>Is Day Light Saving</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="661d952f-083b-4bbe-8df1-f7c12170d312">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3419a260-86be-4c49-8ab6-3b02446d5cae">
+      <ID>GEOGRAPHY</ID>
+      <Name>GEOGRAPHY</Name>
+      <DimensionID>GEOGRAPHY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="27659838-20d3-4828-967d-2faf0c19cb25">
+          <AttributeID>Geography SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5446f8d2-2068-4b46-8d39-fc2d64f1a26e">
+          <AttributeID>County SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4cb9c593-8624-4797-954c-84e6b2250567">
+          <AttributeID>State SK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="44ce70ed-0a79-4be8-b9fd-313b63e26541">
+          <AttributeID>State Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02622916-6a41-40fd-91bc-92368c517821">
+          <AttributeID>County Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="4adc7150-0815-4dca-be1c-1736761d72e7">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="4969eb03-2862-4d55-af27-6193acc8e949">
+      <ID>AQI STAT MONTH STATE</ID>
+      <Name>AQI STAT MONTH STATE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7109ef5b-feb6-45e4-bfd1-0ad8ab2d6b64">
+          <ID>Min AQI</ID>
+          <Name>Min AQI</Name>
+          <Source dwd:design-time-name="5554333b-7c9d-4cd1-b04c-4a04348cf3cb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="036553bc-3c0e-4465-ba8f-0b36e4e3df3a">
+              <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+              <ColumnID>MinAQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b00aa5bb-68d0-4a1d-8dd6-81c2529d3cb7">
+          <ID>Max AQI</ID>
+          <Name>Max AQI</Name>
+          <Source dwd:design-time-name="04ba6ee5-0968-4476-85d2-8f70018529b1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="43ca4ec7-9fe7-43ae-8a54-b20af2874300">
+              <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+              <ColumnID>MaxAQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e9d1145a-fa8b-40f8-8ab0-a972b873db97">
+          <ID>Avg AQI</ID>
+          <Name>Avg AQI</Name>
+          <Source dwd:design-time-name="f69b6c9b-7ed6-43f0-bcf1-8033b86e8c32">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ce6076eb-08ec-43b7-961b-4dd2d48f864a">
+              <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+              <ColumnID>AvgAQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b6d9e123-31b5-4724-be53-17bc205a9a5b">
+          <ID>Std Dev AQI</ID>
+          <Name>Std Dev AQI</Name>
+          <Source dwd:design-time-name="6101e46c-ed71-47a9-985b-782212cb4af3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="617b96e7-bd71-4a63-90a5-560e85e97a87">
+              <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+              <ColumnID>StdDevAQI</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="48255d2b-456f-46d7-8753-a373dd0118d9">
+          <ID>AQI STAT MONTH STATE Count</ID>
+          <Name>AQI STAT MONTH STATE Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="82d0a342-17d2-4606-afab-6fbc2bf6adb8">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="b17c1102-0468-471c-915d-cc6e4ac49136">
+              <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="794eb060-425d-4d76-b731-b32e0b14f003">
+          <CubeDimensionID>DATE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="66868c3a-7e62-4300-90f7-7f61ac34cae7">
+              <AttributeID>SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="656b4017-c1c8-4233-bda0-11fbd45e61d4">
+                  <DataType>SmallInt</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3323556a-d47f-40b0-b4a1-9b31d02ecf2c">
+                    <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+                    <ColumnID>MonthSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="17050996-5a5d-4a93-a0be-01247700cd36">
+          <CubeDimensionID>PARAMETER</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ce8473d3-4242-49cf-a580-a3e8555fbe18">
+              <AttributeID>Parameter SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8c03f265-0e50-4539-b0be-25eeb2e43963">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2dad2d47-3598-4540-8fe1-59c7ffc6ddbe">
+                    <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+                    <ColumnID>ParameterSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="55b92947-4749-4d49-a875-a7629cdbff73">
+          <CubeDimensionID>GEOGRAPHY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="216ffd94-478c-49d3-988f-081c08acaaab">
+              <AttributeID>State SK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d5e41e6c-3357-4fc9-a6e2-85ff91004a2f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="253f9bf1-c8dc-41cb-9404-6aec298e5fec">
+                    <TableID>FACT_AQI_x0020_STAT_x0020_MONTH_x0020_STATE</TableID>
+                    <ColumnID>StateSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="f9c2fed3-83a9-4d7e-a446-8d4f94fc4945">
+    <DataSourceViewID>2425BIDATH DDS</DataSourceViewID>
+  </Source>
+</Cube>
